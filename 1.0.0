@@ -1,0 +1,51 @@
+# Operaciones-Matrices-
+Este programa proporciona al usuario un menú con la disponibilidad de realizar operaciones con matrices 
+
+
+#include <stdio.h>
+
+
+int matriz1[3][3];
+int matriz2[3][3];
+
+
+	enum opciones {suma,resta,multi};
+	int fi;
+
+main (){
+	
+    printf("                        Bienvenido al Programa: \n");
+    printf ("                       Operciones de Matricez \n");
+    printf ("                       Seleccione la Operacion \n");
+    printf ("\n");
+	printf ("                         1)Operacion Suma \n");
+	printf ("                         2)Operacion Resta\n");
+	printf ("                    3)Operacion Multiplicacion \n");
+	printf ("\n");
+	printf ("--------------------------------------------------------------------------------\n");
+	printf ("\n");
+	printf ("   Selecciona una opcion\n");
+	printf ("\n");
+	scanf("%d",& fi);
+	
+	 switch (fi-1){
+	 	case suma:
+		  printf ("Seleccionaste Suma\n");
+		  
+		  break;
+	 	case resta:
+	 	   printf ("Seleccionaste Resta\n");
+	 	   
+		   break;
+	 	case multi:
+	 	printf ("Seleccionaste Multipicacion\n");
+	 	
+		  break;
+	 } 
+	
+	
+	
+
+	return 0;
+	
+}
