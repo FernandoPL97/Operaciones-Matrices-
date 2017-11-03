@@ -1,16 +1,17 @@
-# Operaciones-Matrices-
-Este programa proporciona al usuario un menú con la disponibilidad de realizar operaciones con matrices 
-
-
 #include <stdio.h>
+#include<math.h>
 
 
 int matriz1[3][3];
 int matriz2[3][3];
+int resultado[3][3];
 
 
 	enum opciones {suma,resta,multi};
 	int fi;
+	int i,j;
+	int temporal;
+	int k;
 
 main (){
 	
@@ -24,28 +25,115 @@ main (){
 	printf ("\n");
 	printf ("--------------------------------------------------------------------------------\n");
 	printf ("\n");
-	printf ("   Selecciona una opcion\n");
+	printf ("   Selecciona una Opcion:\n");
 	printf ("\n");
+	
 	scanf("%d",& fi);
 	
 	 switch (fi-1){
 	 	case suma:
+	 	  printf("\n");
 		  printf ("Seleccionaste Suma\n");
+		  printf("\n");
+		  
+	     //codigo de suma
 		  
 		  break;
+		  
 	 	case resta:
+	 	   printf("\n");
 	 	   printf ("Seleccionaste Resta\n");
+	 	   printf("\n");
+	 	   
+	 	   //codigo de resta
 	 	   
 		   break;
+		   
 	 	case multi:
-	 	printf ("Seleccionaste Multipicacion\n");
+	 		 printf("\n");
+	 	     printf ("Seleccionaste Multipicacion\n");
+	 	     printf("\n");
+	 	     printf ("Introduce los valores de la Matriz 1\n");
+	 	     printf("\n");
 	 	
-		  break;
-	 } 
-	
-	
-	
+	 	     for( i = 0 ; i < 3 ; i++){
+		
+		         for( j = 0 ; j < 3 ; j++){
+			
+			         printf("Valor en %d, %d :" , i , j);
+			         printf("\n");
+			         scanf("%d", &matriz1[i][j]);
+			
+		             }
+		        }
+		     printf("\n");       
+             printf ("Introduce los valores de la Matriz 2\n");
+             printf("\n");
+		
+	 	     for( i = 0 ; i < 3 ; i++){
+		
+		         for( j = 0 ; j < 3 ; j++){
+			
+			         printf("Valor en %d, %d :" , i , j);
+			         printf("\n");
+			         scanf("%d", &matriz2[i][j]);
+			
+		             }
+		
+	         }
+	         
 
+             for (i=0;i<3;i++){    
+	            	for (j=0;j<3;j++){ 
+    		            for (k=0;k<3;k++){
+				             resultado[i][j]=resultado[i][j]+(matriz1[i][k]*matriz2[k][j]);
+                     	}
+                 	}
+             }
+
+             printf("\n");
+             printf ("Matriz 1:\n");
+             printf("\n");
+                    
+	         for( i = 0 ; i < 3 ; i++){
+		
+	            	for( j = 0 ; j < 3 ; j++){
+			            printf("%d ", matriz1[i][j]);
+			
+		            }
+	                	printf("\n");
+         	 }
+         	 
+         	 printf("\n");
+         	 printf ("Matriz 2:\n");
+         	 printf("\n");
+         	 
+	         for( i = 0 ; i < 3 ; i++){
+		
+	            	for( j = 0 ; j < 3 ; j++){
+			            printf("%d ", matriz2[i][j]);
+			
+		            }
+	                	printf("\n"); 
+             }
+             
+             printf("\n");
+             printf ("Matriz resultante:\n");
+             printf("\n");
+             
+             for( i = 0 ; i < 3 ; i++){
+		
+	            	for( j = 0 ; j < 3 ; j++){
+			            printf("%d ", resultado[i][j]);
+			
+		            }
+	                	printf("\n");
+         	 }
+             printf("\n");
+             printf("Fin del Programa");
+         	 break;
+    }      
+		
 	return 0;
 	
 }
